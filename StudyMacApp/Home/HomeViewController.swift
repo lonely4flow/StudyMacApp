@@ -10,6 +10,8 @@ import Cocoa
 
 class HomeViewController: NSViewController {
 
+    @IBOutlet weak var pathField: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,22 @@ class HomeViewController: NSViewController {
     
 
     @IBAction func selectPathBtnClicked(_ sender: Any) {
+        let openPanel = NSOpenPanel()
+        // 选择文件夹
+        openPanel.canChooseDirectories = true
+        // 选择文件
+        openPanel.canChooseFiles = false
+        openPanel.allowsMultipleSelection = false
+        openPanel.allowedFileTypes = ["ipa"]
+
+        
+        let finded = openPanel.runModal()
+        if .OK == finded {
+            guard let path = openPanel.url?.path else {
+                return
+            }
+            self.pathField.stringValue = path
+        }
     }
     
 }

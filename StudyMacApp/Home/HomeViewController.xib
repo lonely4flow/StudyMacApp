@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HomeViewController" customModule="StudyMacApp" customModuleProvider="target">
             <connections>
+                <outlet property="pathField" destination="kdm-SS-osC" id="l8f-3J-9Pk"/>
                 <outlet property="view" destination="c22-O7-iKe" id="XXA-jX-KH3"/>
             </connections>
         </customObject>
@@ -27,8 +28,17 @@
                         </connections>
                     </buttonCell>
                 </button>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdm-SS-osC">
+                    <rect key="frame" x="7" y="175" width="317" height="22"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="giP-bR-tYt">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-hx-xmh">
-                    <rect key="frame" x="1" y="180" width="106" height="32"/>
+                    <rect key="frame" x="335" y="168" width="106" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="SelectPath" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="X4g-gK-kEo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
